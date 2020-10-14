@@ -10,12 +10,12 @@ namespace PracticeProblemsLINQ
     {
         static void Main(string[] args)
         {
-            //Problem 1
-            List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
+            ////Problem 1
+            //List<string> words = new List<string>() { "the", "bike", "this", "it", "tenth", "mathematics" };
 
 
             //Problem 2
-            List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Ian", "Mike" };
+            //List<string> names = new List<string>() { "Mike", "Brad", "Nevin", "Ian", "Mike" };
 
 
             //Problem 3 & Problem 4
@@ -28,19 +28,22 @@ namespace PracticeProblemsLINQ
             };
 
 
-            //Problem 5
-            List<string> classGrades = new List<string>()
-            {
-                "80,100,92,89,65", 
-                "93,81,78,84,69",
-                "73,88,83,99,64",
-                "98,100,66,74,55"
-            };
+            ////Problem 5
+            //List<string> classGrades = new List<string>()
+            //{
+            //    "80,100,92,89,65", 
+            //    "93,81,78,84,69",
+            //    "73,88,83,99,64",
+            //    "98,100,66,74,55"
+            //};
 
 
-            //--------------------
-            //Bonus Problem 1
-            string letters = "terrill";
+            ////--------------------
+            ////Bonus Problem 1
+            //string letters = "terrill";
+
+            LinqProblems.RunProblem2(names);
+            Console.ReadLine();
 
         }
     }
