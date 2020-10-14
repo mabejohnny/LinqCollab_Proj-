@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -17,14 +18,12 @@ namespace PracticeProblemsLINQ
         //Using LINQ, write a method that takes in a list of strings and returns all words that contain the substring “th” from a list.
         public static List<string> RunProblem1(List<string> words)
         {
-            //code
             var wordsThatContainTH = words.Where(w => w.Contains("th"));
 
             foreach (var word in wordsThatContainTH)
             {
                 Console.WriteLine(word);
             }
-            //return
             return words;
         }
         #endregion
@@ -34,10 +33,7 @@ namespace PracticeProblemsLINQ
         //Using LINQ, write a method that takes in a list of strings and returns a copy of the list without duplicates.
         public static List<string> RunProblem2(List<string> names)
         {
-            //code
             var sameListNoDuplicates = names.Distinct();
-
-            //return
             foreach (var name in sameListNoDuplicates)
             {
                 Console.WriteLine(name);
@@ -52,30 +48,29 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem3(List<Customer> customers)
         {
             //code
-            List<Customer> customerNamedMike = customers.Where(c => c.FirstName =="Mike").ToList();
-
-            foreach (var item in customerNamedMike)
-            {
-                Console.WriteLine(item);
-            }
-            return null;
-          
-
+            var customerNamedMike = customers.Where(c => c.FirstName == "Mike").SingleOrDefault();         
+            return customerNamedMike;
         }
         #endregion
 
-        //#region Problem 4
-        ////(5 points) Problem 4
-        ////Using LINQ, write a method that takes in a list of customers and returns the customer who has an id of 3. 
-        ////Then, update that customer's first name and last name to completely different names and return the newly updated customer from the method.
-        //public static Customer RunProblem4(List<Customer> customers)
-        //{
-        //    //code
-
-        //    //return
-
-        //}
-        //#endregion
+        #region Problem 4
+        //(5 points) Problem 4
+        //Using LINQ, write a method that takes in a list of customers and returns the customer who has an id of 3. 
+        //Then, update that customer's first name and last name to completely different names and return the newly updated customer from the method.
+        public static Customer RunProblem4(List<Customer> customers)
+        {
+            var customerIdThree = customers.Where(c => c.Id == 3).SingleOrDefault();
+            foreach (var customer in customers)
+            {
+                if (customer.Id == 3)
+                {
+                    customer.FirstName = "John";
+                    customer.LastName = "Doe";
+                }
+            }
+            return customerIdThree;
+        }
+        #endregion
 
         //#region Problem 5
         ////(5 points) Problem 5
