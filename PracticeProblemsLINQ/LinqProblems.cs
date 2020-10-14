@@ -60,32 +60,39 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem4(List<Customer> customers)
         {
             var customerIdThree = customers.Where(c => c.Id == 3).SingleOrDefault();
-            foreach (var customer in customers)
-            {
-                if (customer.Id == 3)
-                {
-                    customer.FirstName = "John";
-                    customer.LastName = "Doe";
-                }
-            }
+           
+                    customerIdThree.FirstName = "John";
+                    customerIdThree.LastName = "Doe";
+            
             return customerIdThree;
         }
         #endregion
 
-        //#region Problem 5
-        ////(5 points) Problem 5
-        ////Using LINQ, write a method that calculates the class grade average after dropping the lowest grade for each student.
-        ////The method should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), 
-        ////drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
-        ////Expected output: 86.125
-        //public static double RunProblem5(List<string> classGrades)
-        //{
-        //    //code
+        #region Problem 5
+        //(5 points) Problem 5
+        //Using LINQ, write a method that calculates the class grade average after dropping the lowest grade for each student.
+        //The method should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), 
+        //drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
+        //Expected output: 86.125
+        public static double RunProblem5(List<string> classGrades)
+        {
+            //code
 
-        //    //return
+            //1. separate out the numbers in the string
+            //2. convert to array of doubles
+            //3. compare min to max
+            //4. drop min
+            //5. set average 
+            //var firstString = classGrades[0].Select()
+            var gradeResults = classGrades.Select(x => x.Split(',')).Select(x => Array.ConvertAll(x, double.Parse);
+            var listWithoutMin = gradeResults.Min(); 
+            
 
-        //}
-        //#endregion
+            //return
+
+            return 3;
+        }
+        #endregion
 
         //#region Bonus Problem 1
         ////(5 points) Bonus Problem 1
