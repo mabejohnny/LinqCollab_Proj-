@@ -72,20 +72,20 @@ namespace PracticeProblemsLINQ
         }
         #endregion
 
-        //#region Problem 5
-        ////(5 points) Problem 5
-        ////Using LINQ, write a method that calculates the class grade average after dropping the lowest grade for each student.
-        ////The method should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), 
-        ////drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
-        ////Expected output: 86.125
-        //public static double RunProblem5(List<string> classGrades)
-        //{
-        //    //code
+        #region Problem 5
+        //(5 points) Problem 5
+        //Using LINQ, write a method that calculates the class grade average after dropping the lowest grade for each student.
+        //The method should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), 
+        //drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
+        //Expected output: 86.125
+        public static double RunProblem5(List<string> classGrades)
+        {
+            //code
 
-        //    //return
+            //return
 
-        //}
-        //#endregion
+        }
+        #endregion
 
         //#region Bonus Problem 1
         ////(5 points) Bonus Problem 1
