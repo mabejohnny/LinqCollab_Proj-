@@ -60,14 +60,10 @@ namespace PracticeProblemsLINQ
         public static Customer RunProblem4(List<Customer> customers)
         {
             var customerIdThree = customers.Where(c => c.Id == 3).SingleOrDefault();
-            foreach (var customer in customers)
-            {
-                if (customer.Id == 3)
-                {
-                    customer.FirstName = "John";
-                    customer.LastName = "Doe";
-                }
-            }
+           
+                    customerIdThree.FirstName = "John";
+                    customerIdThree.LastName = "Doe";
+            
             return customerIdThree;
         }
         #endregion
@@ -82,7 +78,20 @@ namespace PracticeProblemsLINQ
         {
             //code
 
+
+            //1. separate out the numbers in the string
+            //2. convert to array of doubles
+            //3. compare min to max
+            //4. drop min
+            //5. set average 
+            //var firstString = classGrades[0].Select()
+            var gradeResults = classGrades.Select(x => x.Split(',')).Select(x => Array.ConvertAll(x, double.Parse);
+            var listWithoutMin = gradeResults.Min(); 
+            
+
             //return
+
+            return 3;
 
         }
         #endregion
